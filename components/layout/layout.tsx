@@ -25,16 +25,16 @@ export default function Layout({ children }: LayoutProps) {
   }
 
   return (
-    <>
+    <div className="bg-gray-200 h-screen">
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <div className="md:pl-64 flex flex-col flex-1">
         <MobileHeader />
-        <main className="flex-1">
+        <main className="flex-1 bg-gray-200">
           <div className="pb-8">
             <div className="max-w-7xl mx-auto">{children}</div>
           </div>
         </main>
       </div>
-    </>
+    </div>
   );
 }

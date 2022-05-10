@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const docs = await getDocs(query(postCollection, where("slug", "==", params["slug"]), limit(1)));
   const post = firestoreCollectionToPostArray(docs.docs.map((doc) => ({ ...doc.data(), id: doc.id })))[0];
 
-  return { props: { post: post }, revalidate: 60 * 60 };
+  return { props: { post: post }, revalidate: 60 };
 };
 export const getStaticPaths: GetStaticPaths = async () => {
   const postCollection = collection(firestore, "posts");
