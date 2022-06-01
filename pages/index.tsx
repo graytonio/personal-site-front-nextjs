@@ -5,7 +5,7 @@ import { collection, query, where, getDocs, limit, orderBy } from "firebase/fire
 import Post, { firestoreCollectionToPostArray } from "../types/Post";
 import PostCard from "../components/pure/postcard";
 
-const tmpImage = "/tmp.jfif";
+const tmpImage = "/profile.jfif";
 
 const Home = ({ featured }: { featured: Post[] }) => {
   return (
